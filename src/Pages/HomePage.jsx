@@ -2,10 +2,18 @@ import React from 'react'
 
 const HomePage = () => {
   return (
-    <div>
+    <>
+      <header>
         <h1>Home Page</h1>
-    </div>
-  )
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ipsa
+          autem unde error illum quas qui assumenda natus quod suscipit. Numquam
+          veniam molestias unde quis eligendi nam, repellendus doloremque
+          ratione.
+        </p>
+      </header>
+    </>
+  );
 }
 
 export default HomePage

@@ -1,9 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import '../styles/styles.css'
 const NavBar = () => {
   return (
     <>
-      <nav className="navbar navbar-dark bg-dark fixed-top">
+      <nav className="navbar navbar-dark bg-dark fixed-top ">
         <div className="container-fluid">
           <a className="navbar-brand" href="/#">
             Servicios de Impresion 3D ONE
@@ -43,24 +44,29 @@ const NavBar = () => {
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/#">
+                  <NavLink className="nav-link" to="/checkout">
                     CheckOut
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/#">
+                  <NavLink className="nav-link" to="/registroInicio">
                     Sign in/Log in
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/#">
+                  <NavLink className="nav-link" to="/perfil">
                     Mi Perfil
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/#">
+                  <NavLink className="nav-link" to="/productos">
                     Lista de productos
-                  </a>
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/producto">
+                    Producto
+                  </NavLink>
                 </li>
                 {/* <li className="nav-item dropdown">
                   <a
