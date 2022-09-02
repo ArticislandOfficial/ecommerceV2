@@ -5,26 +5,27 @@ const FormSingUp = () => {
     <>
       <form>
         <LabelInput
-          htmlFor="Email"
-          label="Email"
+          htmlFor="correo"
+          label="Correo"
           type="text"
-          id="Email"
-          ariadescribedby="emailHelp"
+          id="correoFS"
+          ariadescribedby="correoHelp"
         />
         <LabelInput
-          htmlFor="nombre"
-          label="Nombre"
+          htmlFor="Usario"
+          label="Usuario"
           type="text"
-          id="nombre"
-          ariadescribedby="nameHelp"
+          id="UsarioFS"
+          ariadescribedby="usuarioHelp"
         />
         <LabelInput
-          htmlFor="password"
-          label="Password"
+          htmlFor="Contraseña"
+          label="Contraseña"
           type="password"
-          id="passworde"
+          id="contraseñaFS"
           ariadescribedby="passwordHelp"
         />
+     
 
         <div className=" text-center">
           <button type="submit" className=" text-center  btn btn-primary">

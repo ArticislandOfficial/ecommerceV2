@@ -4,7 +4,7 @@ import '../styles/styles.css'
 const NavBar = () => {
   return (
     <>
-      <nav className="navbar navbar-dark bg-dark">
+      <nav className="navbar navbar-dark bg-dark fixed-top ">
         <div className="container-fluid">
           <a className="navbar-brand" href="/#">
             Servicios de Impresion 3D ONE

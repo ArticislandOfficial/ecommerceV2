@@ -5,19 +5,20 @@ const FormSingIn = () => {
     <>
       <form>
         <LabelInput
-          htmlFor="nombre"
-          label="Nombre"
+          htmlFor="usuario"
+          label="Usuario"
           type="text"
-          id="nombre"
+          id="usuario"
           ariadescribedby="nameHelp"
         />
         <LabelInput
-          htmlFor="password"
-          label="Password"
+          htmlFor="contraseña"
+          label="Contraseña"
           type="password"
-          id="passworde"
+          id="contraseña"
           ariadescribedby="passwordHelp"
         />
+
 
         <div className=" text-center">
           <button type="submit" className=" text-center  btn btn-primary">
