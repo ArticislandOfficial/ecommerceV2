@@ -1,9 +1,77 @@
+:root{/*paleta de colores declaradas como variables */
+    --blanco: #ffffff;
+    --obscuro: #212121;
+    --primario: #ffc107;
+    --Secundario: #0097a7;
+    --gris:#757575;
+    --grisClaro: #dfe9f3;
+
+    }
 .margen-navBar {
-  margin-bottom: 30px ;
+  margin-bottom: 30px;
   margin-top: 100px;
 }
-.footerposition{
-bottom: 0;
+
+.estiloImagen {
+  width: fit-content;
+}
+/*Hero */
+.hero {
+  background-image: url(https://picsum.photos/1080);/* para selecionar la imagen en la carpeta contenedora del proyecto*/
+  background-repeat: no-repeat; /*esto evita que se repita la imagen por el tamaño que se le da*/
+  background-size: cover; /*hace un poco mas grande la imagen */;
+  border-radius: 25px;
+  height: 450px;
+  position: relative;
+  margin-bottom: 2rem; /*para separa el main de la foto*/
+}
+
+.contenido-hero {
+  /* color: var(--blanco); */
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  display: flex; /*codigo para alinear verticalmente */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+}
+
+.contenido-hero h2,
+.contenido-hero p {
+  color: var(--blanco);
+}
+
+
+.boton{
+            background-color: var(--Secundario);
+            color: var(--blanco);/*cambia el color de texto*/
+            padding: 1rem 3rem;
+            margin-top: 3rem;
+            font-size: 2rem;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: .5rem;
+            width: 90%;
+            text-align: center;
+            border: none;
+
+        
+        }
+@media (min-width: 768px) {
+        .boton{
+                width: auto;
+              }  
+    }
+
+.boton:hover{
+    cursor: pointer;
+}  
+
+.footerposition {
+  bottom: 0;
   position: fixed;
   width: 100%;
 }

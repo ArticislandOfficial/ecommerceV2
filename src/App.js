@@ -1,6 +1,6 @@
 import React from 'react';
 import AppRouter from "../src/routers/AppRouter"
-import Footer from './components/Footer'
+// import Footer from './components/Footer'
 
 
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -10,7 +10,7 @@ const App = () => {
   return (
     <>
       <AppRouter />
-      <Footer/>
+      {/* <Footer/> */}
     </>
   );
 }
