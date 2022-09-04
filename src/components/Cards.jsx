@@ -7,7 +7,7 @@ const Cards = (props) => {
         <section className="card estiloextcard  my-3 ">
           <img
             src={props.src}
-            className="card-img-top" //https://picsum.photos/1080
+            className="card-img-top" 
             alt={props.alt}
           />
           <article className="card-body text-center">
