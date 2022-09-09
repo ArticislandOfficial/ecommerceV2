@@ -23,10 +23,10 @@ const Producto = () => {
             impedit veritatis consectetur exercitationem suscipit.
           </p>
         </section>
-        <div class="col-md-3">
-          <div class="card-body">
-            <h5 class="card-title mb-3">Caracteristicas</h5>
-            <p class="card-text">Precio : variable</p>
+        <div className="col-md-3">
+          <div className="card-body">
+            <h5 className="card-title mb-3">Caracteristicas</h5>
+            <p className="card-text">Precio : variable</p>
 
             <div className="d-grid gap-2 col-6 mx-auto">
               <button className="btn btn-primary" type="button">

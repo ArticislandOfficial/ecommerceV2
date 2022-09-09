@@ -86,7 +86,7 @@ const Porfile = () => {
             </article>
           </section>
         </div>
-        <button type="button" class="col-md-2  btn btn-primary">
+        <button type="button" className="col-md-2  btn btn-primary">
          Guardar Info
         </button>
       </main>

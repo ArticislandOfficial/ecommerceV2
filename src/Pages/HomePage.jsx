@@ -9,7 +9,7 @@ const HomePage = () => {
           <h2 className="py-1 px-2 text-center">
             Servicios de impresion , diseño y venta de modelos 3D
           </h2>
-          <button type="button" class="boton btn btn-success">
+          <button type="button" className="boton btn btn-success">
             Ver catalogo
           </button>
         </article>
@@ -19,7 +19,8 @@ const HomePage = () => {
 
         <Cards
           class="col-md-4"
-          src="https://picsum.photos/1080"
+          src="https://picsum.photos/200
+          "
           alt="imagen1"
           Cardtitle="Producto 1"
           text="20 USD"
@@ -47,7 +48,6 @@ const HomePage = () => {
           textButton="Ver Producto"
         />
       </section>
-     
     </>
   );
 };
