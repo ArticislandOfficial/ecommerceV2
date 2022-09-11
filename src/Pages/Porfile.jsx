@@ -7,8 +7,8 @@ const Porfile = () => {
   return (
     <>
       <main>
-        <h3 className="pb-3 ">Tu informaciòn personal</h3>
-        <div className="row pruebaform">
+        <h3 className="pb-3 mt-5 ">Tu informaciòn personal</h3>
+        <div className="row cont-posfotter-abajo pruebaform">
           <section className="col-md-6 ">
             <article>
               <LabelInput
@@ -86,8 +86,8 @@ const Porfile = () => {
             </article>
           </section>
         </div>
-        <button type="button" className="col-md-2  btn btn-primary">
-         Guardar Info
+        <button type="button" className="col-md-2 mb-3 btn btn-primary">
+          Guardar Info
         </button>
       </main>
     </>

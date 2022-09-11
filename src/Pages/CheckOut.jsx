@@ -1,9 +1,7 @@
 import React from 'react'
 
 const CheckOut = () => {
-  return (
-    <div>CheckOut</div>
-  )
+  return <div className="cont-posfotter-abajo">CheckOut</div>;
 }
 
 export default CheckOut

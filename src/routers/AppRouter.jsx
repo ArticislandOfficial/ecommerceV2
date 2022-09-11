@@ -23,15 +23,15 @@ const AppRouter = () => {
     <>
       <Router>
         <NavBar />
-        <div className="container my-5 pt-5">
+        <div className="container my-5 pt-5 ">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/checkout" element={<CheckOut />} />
-            
+
             <Route path="/registroInicio" element={<RegistroInicio />} />
             <Route path="/producto" element={<Producto />} />
             <Route path="/productos" element={<Productos />} />
-            <Route path='/perfil' element={<Porfile/>}/>
+            <Route path="/perfil" element={<Porfile />} />
 
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>

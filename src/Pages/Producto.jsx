@@ -3,11 +3,11 @@ import React from "react";
 const Producto = () => {
   return (
     <>
-      <section className=" row">
-        <article className=" col-md-4 my-3">
+      <section className=" row  cont-posfotter-abajo">
+        <article className=" col-md-4 prop-paracentrar align-middle my-3">
           <img
             // col-md-3 col-sm-3
-            className="img-fluid contenedorImg"
+            className="img-fluid  contenedorImg"
             src="https://picsum.photos/1080"
             alt=""
             srcset=""
@@ -32,7 +32,6 @@ const Producto = () => {
               <button className="btn btn-primary" type="button">
                 Button
               </button>
-             
             </div>
           </div>
         </div>

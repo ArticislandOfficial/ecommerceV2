@@ -19,8 +19,7 @@ const HomePage = () => {
 
         <Cards
           class="col-md-4"
-          src="https://picsum.photos/200
-          "
+          src="https://picsum.photos/1080"
           alt="imagen1"
           Cardtitle="Producto 1"
           text="20 USD"

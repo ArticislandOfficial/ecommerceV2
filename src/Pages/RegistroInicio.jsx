@@ -5,12 +5,12 @@ import FormSigUp from "../components/FormSingUp";
 const RegistroInicio = () => {
   return (
     <>
-      <main className="container py-5">
-        <h2 className="text-center mb-5">Vamos registrate o inicia sesion</h2>
-        <div className="row pruebaform">
-          <section className="col-md-6 ">
+      <main className="container">
+        <div className="row prop-paracentrar cont-posfotter-abajo pruebaform">
+          <h2 className="text-center ">Vamos registrate o inicia sesion</h2>
+          <section className="col-md-6 border-end ">
             <h4 className="text-center">Inicia Sesion</h4>
-            <article>
+            <article className="">
               <FormSigIn />
             </article>
           </section>
