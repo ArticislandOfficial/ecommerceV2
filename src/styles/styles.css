@@ -14,8 +14,11 @@
   grid-template-columns: auto 1fr auto;
 }
 .prop-paracentrar {
+  padding: 2rem;
+  min-width: fit-content;
   display: flex;
   align-items: center;
+  margin-bottom: 23rem;
 }
 .centrarcontenido {
   display: flex;
