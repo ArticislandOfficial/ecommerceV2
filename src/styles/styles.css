@@ -8,10 +8,13 @@
   --grisClaro: #dfe9f3;
 }
 .cont-posfotter-abajo {
-
+ margin-bottom: 0px!important;
   display: grid;
   min-height: 100vh;
   grid-template-columns: auto 1fr auto;
+}
+.separado-de-navBar{
+  margin-top: 5rem;
 }
 .prop-paracentrar {
   padding: 2rem;
@@ -101,5 +104,6 @@
 /* Imagen */
 
 .contenedorImg {
+  width: 30rem;
   border-radius: 0.5rem;
 }

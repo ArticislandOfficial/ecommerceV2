@@ -23,7 +23,8 @@ const AppRouter = () => {
     <>
       <Router>
         <NavBar />
-        <div className="container my-5 pt-5 ">
+        <div className="container   ">
+          {/* mt-5 pt-5 */}
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/checkout" element={<CheckOut />} />

@@ -8,75 +8,77 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="navbar navbar-dark bg-dark fixed-top ">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="/#">
-            Servicios de Impresion 3D ONE
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasDarkNavbar"
-            aria-controls="offcanvasDarkNavbar"
-          >
-            <span className="navbar-toggler-icon" />
-          </button>
-          <div
-            className="offcanvas offcanvas-end text-bg-dark"
-            tabIndex={-1}
-            id="offcanvasDarkNavbar"
-            aria-labelledby="offcanvasDarkNavbarLabel"
-          >
-            <div className="offcanvas-header">
-              <h5 className="offcanvas-title" id="offcanvasDarkNavbarLabel">
-                {auth.username ? `Bienvenido ${auth.username}` : "Cuenta"}
-              </h5>
-              <button
-                type="button"
-                className="btn-close btn-close-white"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              />
-            </div>
-            {/* Lista del menu */}
-            <div className="offcanvas-body">
-              <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li className="nav-item">
-                  <NavLink to="/" className="nav-link " aria-current="page">
-                    Home
-                  </NavLink>
-                </li>
-                <li className="nav-item">
-                  <NavLink className="nav-link" to="/checkout">
-                    CheckOut
-                  </NavLink>
-                </li>
-                <li className="nav-item">
-                  <NavLink className="nav-link" to="/registroInicio">
-                    Sign in/Log in
-                  </NavLink>
-                </li>
-                <li className="nav-item">
-                  <NavLink className="nav-link" to="/perfil">
-                    Mi Perfil
-                  </NavLink>
-                </li>
-                <li className="nav-item">
-                  <NavLink className="nav-link" to="/productos">
-                    Lista de productos
-                  </NavLink>
-                </li>
-                <li className="nav-item">
-                  <NavLink className="nav-link" to="/producto">
-                    Producto
-                  </NavLink>
-                </li>
-              </ul>
+      <header>
+        <nav className="navbar navbar-dark bg-dark fixed-top ">
+          <div className="container-fluid">
+            <a className="navbar-brand" href="/#">
+              Servicios de Impresion 3D ONE
+            </a>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasDarkNavbar"
+              aria-controls="offcanvasDarkNavbar"
+            >
+              <span className="navbar-toggler-icon" />
+            </button>
+            <div
+              className="offcanvas offcanvas-end text-bg-dark"
+             
+              id="offcanvasDarkNavbar"
+              aria-labelledby="offcanvasDarkNavbarLabel"
+            >
+              <div className="offcanvas-header">
+                <h5 className="offcanvas-title" id="offcanvasDarkNavbarLabel">
+                  {auth.username ? `Bienvenido ${auth.username}` : "Cuenta"}
+                </h5>
+                <button
+                  type="button"
+                  className="btn-close btn-close-white"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                />
+              </div>
+              {/* Lista del menu */}
+              <div className="offcanvas-body">
+                <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li className="nav-item">
+                    <NavLink to="/" className="nav-link " aria-current="page">
+                      Home
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink className="nav-link" to="/checkout">
+                      CheckOut
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink className="nav-link" to="/registroInicio">
+                      Sign in/Log in
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink className="nav-link" to="/perfil">
+                      Mi Perfil
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink className="nav-link" to="/productos">
+                      Lista de productos
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink className="nav-link" to="/producto">
+                      Producto
+                    </NavLink>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </header>
     </>
   );
 };

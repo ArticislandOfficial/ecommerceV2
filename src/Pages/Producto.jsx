@@ -3,7 +3,7 @@ import React from "react";
 const Producto = () => {
   return (
     <>
-      <section className=" row  cont-posfotter-abajo">
+      <section className=" row mt-5  cont-posfotter-abajo">
         <article className=" col-md-4 prop-paracentrar align-middle my-3">
           <img
             // col-md-3 col-sm-3
