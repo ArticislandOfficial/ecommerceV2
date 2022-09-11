@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
 import { NavLink } from "react-router-dom";
-import '../styles/styles.css'
+import "../styles/styles.css";
+
 const NavBar = () => {
+  const { auth } = useContext(AuthContext);
+
   return (
     <>
       <nav className="navbar navbar-dark bg-dark fixed-top ">
@@ -26,7 +30,7 @@ const NavBar = () => {
           >
             <div className="offcanvas-header">
               <h5 className="offcanvas-title" id="offcanvasDarkNavbarLabel">
-                Menu
+                {auth.username ? `Bienvenido ${auth.username}` : "Cuenta"}
               </h5>
               <button
                 type="button"
@@ -68,30 +72,6 @@ const NavBar = () => {
                     Producto
                   </NavLink>
                 </li>
-                {/* <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Dropdown
-                  </a>
-                  <ul className="dropdown-menu dropdown-menu-dark">
-                    <li>
-                      <a className="dropdown-item">Action</a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item">Another action</a>
-                    </li>
-                    <li>
-                      <hr className="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a className="dropdown-item">Something else here</a>
-                    </li>
-                  </ul>
-                </li> */}
               </ul>
             </div>
           </div>
