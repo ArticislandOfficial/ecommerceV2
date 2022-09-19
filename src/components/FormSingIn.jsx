@@ -18,7 +18,7 @@ const FormSingIn = () => {
     e.preventDefault();
     await login(form);
     // para visualizar el objeto en consola
-    console.log(form);
+    // console.log(form);
   };
   //////////////////////////////////////////
   const cambio = (e) => {
