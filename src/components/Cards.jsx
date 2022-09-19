@@ -12,9 +12,9 @@ const Cards = (props) => {
             <h5 className="card-title">{props.Cardtitle}</h5>
             <p className="card-text">{props.text}</p>
             <NavLink to="/producto">
-              <a href={props.href} className="btn btn-primary">
+              {/* <a href={props.href} className="btn btn-primary">
                 {props.textButton}
-              </a>
+              </a> */}
             </NavLink>
           </article>
         </section>
