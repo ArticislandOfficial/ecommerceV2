@@ -1,10 +1,10 @@
+import React, { useContext } from "react";
+import ProductContext from "../context/ProductContext"
+import Cards from "./Cards";
 
-import { NavLink } from "react-router-dom";
-import Cards from "../components/Cards";
-
-const ProductsCards = () => {
-
-
+const ProductsList = () => {
+const { products } = useContext(ProductContext);
+  // console.log(products);
   return (
     <>
       <div className="row justify-content-evenly">
@@ -100,10 +100,23 @@ const ProductsCards = () => {
           textButton="Ver Producto"
         />
       </div>
-      <section></section>
-     
+      <section>
+        {products.map((product) => {
+          return (
+            <Cards
+              key={product.id}
+              class="col-md-3"
+              src="https://picsum.photos/1080"
+              alt="imagen1"
+              Cardtitle={product.name}
+              text={product.price}
+              href=""
+              />
+          );}
+        )}
+      </section>
     </>
   );
-}
+};
 
-export default ProductsCards
+export default ProductsList;
