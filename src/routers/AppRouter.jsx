@@ -30,7 +30,7 @@ const AppRouter = () => {
             <Route path="/checkout" element={<CheckOut />} />
 
             <Route path="/registroInicio" element={<RegistroInicio />} />
-            <Route path="/producto" element={<Producto />} />
+            <Route path="/productos/:idproduct" element={<Producto />} />
             <Route path="/productos" element={<Productos />} />
             <Route path="/perfil" element={<Porfile />} />
 

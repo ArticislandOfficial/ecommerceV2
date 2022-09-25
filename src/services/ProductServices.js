@@ -10,7 +10,7 @@ const CONFIG = {
 };
 export const obtenerProductosService = async () => {
   const resp = await axios.get(URL, CONFIG);
-  console.log(resp.data);
+  // console.log(resp.data);
   return resp.data;
 };
 export const crearProductoService = async (form) => {
@@ -19,5 +19,27 @@ export const crearProductoService = async (form) => {
       "auth-token": localStorage.getItem("token"),
     },
   });
+  return resp.data;
+};
+export const eliminarProductoService = async (id) => {
+  const resp = await axios.delete(`${URL}/${id}`, {
+    headers: {
+      "auth-token": localStorage.getItem("token"),
+    },
+  });
+
+  return resp.data;
+};
+
+export const obtenerProductoService = async (id) => {
+  const resp = await axios.get(`${URL}/${id}`, {
+    headers: {
+      "auth-token": localStorage.getItem("token"),
+    },
+  });
+  return resp.data;
+};
+export const actualizarProductoService = async (id, form) => {
+  const resp = await axios.put(`${URL}/${id}`, form, CONFIG);
   return resp.data;
 };

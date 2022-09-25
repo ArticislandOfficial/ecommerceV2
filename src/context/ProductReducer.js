@@ -5,7 +5,11 @@ const reducer = (globalState, action) => {
         ...globalState,
         products: action.payload,
       };
-
+    case "OBTENER_PRODUCTO":
+      return {
+        ...globalState,
+        product: action.payload,
+      };
     default:
       return globalState;
   }
