@@ -1,7 +1,8 @@
 import React from "react";
+// import ProductContextTOP from "../context/ProductTops/ProductContextTOP";
 import { NavLink } from "react-router-dom";
 
-import Cards from "../components/Cards";
+// import Cards from "../components/Cards";
 
 const HomePage = () => {
   return (
@@ -26,7 +27,7 @@ const HomePage = () => {
         <section className="row ">
           <h3 className="my-3">Top de Productos</h3>
 
-          <Cards
+          {/* <Cards
             class="col-md-4"
             src="https://picsum.photos/1080"
             alt="imagen1"
@@ -54,7 +55,7 @@ const HomePage = () => {
             text="80 USD"
             href=""
             textButton="Ver Producto"
-          />
+          /> */}
         </section>
       </main>
     </>
