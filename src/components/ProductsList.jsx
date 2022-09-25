@@ -1,10 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext,useEffect } from "react";
 import ProductContext from "../context/ProductContext"
 import Cards from "./Cards";
 
 const ProductsList = () => {
-const { products } = useContext(ProductContext);
+const { products, obtenerProductos } = useContext(ProductContext);
   // console.log(products);
+useEffect(() => {
+  obtenerProductos();
+}, [obtenerProductos]);
+
+
   return (
     <>
       <div className="row justify-content-evenly">
@@ -106,12 +111,12 @@ const { products } = useContext(ProductContext);
             <Cards
               key={product.id}
               class="col-md-3"
-              src="https://picsum.photos/1080"
+              src={`${product.img} `}
               alt="imagen1"
               Cardtitle={product.name}
-              text={product.price}
+              text={`${product.price} USD`}
               href=""
-              />
+            />
           );}
         )}
       </section>

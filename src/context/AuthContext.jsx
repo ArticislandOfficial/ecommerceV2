@@ -24,7 +24,7 @@ export const AuthProvider = ({children}) => {
     });
     console.log("Iniciando sesion");
  
-    localStorage.setItem("toke", data.token);
+    localStorage.setItem("token", data.token);
   }
   return <AuthContext.Provider value={{auth , login}}>{children}</AuthContext.Provider>;
 }

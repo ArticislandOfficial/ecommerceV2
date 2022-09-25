@@ -1,30 +1,35 @@
-import React, { useReducer} from "react";
+import React, { useReducer, useCallback } from "react";
 // USECALLBACK SE UTILIZARA PARA MEMORIZAR FUNCIONES Y QUE NO SE EJECUNTEN VARIAS VECES CON LOS USEFFECT
 import ProductContext from "./ProductContext";
 import productReducer from "./ProductReducer";
-
+import { obtenerProductosService} from "../services/ProductServices";
 const initialState = {
-  products: [
-    {
-      id: 1,
-      name: "Laptop",
-      description: "Laptop lenovo alta gama",
-      price: 4000,
-    },
-    {
-      id: 2,
-      name: "Refri",
-      description: "Electrodomestico para guardar alimentos",
-      price: 10000,
-    },
-  ],
-  
+  products: [],
 };
 
 const ProductState = ({ children }) => {
-//    const [globalState, dispatch] = useReducer(productReducer, initialState);
+  const [globalState, dispatch] = useReducer(productReducer, initialState);
+  //  Para catalogo
+  const obtenerProductos = useCallback( async () => {
+    const resp = await obtenerProductosService();
+    const productos = resp.data.map((obj) => {
+      return {
+        id: obj._id,
+        name: obj.name,
+        description: obj.description,
+        price: obj.price,
+      };
+    });
+    // se convierte en nuestro set como si fuera useState
+    dispatch({
+      type: "OBTENER_PRODUCTOS",
+      payload: productos,
+    });
+  }, []);
   return (
-    <ProductContext.Provider value={{ products: initialState.products, }}>
+    <ProductContext.Provider
+      value={{ products: globalState.products, obtenerProductos }}
+    >
       {children}
     </ProductContext.Provider>
   );
