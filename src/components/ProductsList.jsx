@@ -3,7 +3,7 @@ import ProductContext from "../context/ProductContext"
 import Cards from "./Cards";
 
 const ProductsList = () => {
-const { products, obtenerProductos } = useContext(ProductContext);
+const { products, obtenerProductos ,eliminarProducto } = useContext(ProductContext);
   // console.log(products);
 useEffect(() => {
   obtenerProductos();
@@ -12,7 +12,7 @@ useEffect(() => {
 
   return (
     <>
-      <div className="row justify-content-evenly">
+      {/* <div className="row justify-content-evenly">
         <Cards
           class="col-md-3 "
           src="https://picsum.photos/1080"
@@ -104,19 +104,27 @@ useEffect(() => {
           href=""
           textButton="Ver Producto"
         />
-      </div>
+      </div> */}
       <section>
         {products.map((product) => {
           return (
-            <Cards
-              key={product.id}
-              class="col-md-3"
-              src={`${product.img} `}
-              alt="imagen1"
-              Cardtitle={product.name}
-              text={`${product.price} USD`}
-              href=""
-            />
+            <article>
+              <Cards
+                key1={product.id}
+                class="col-md-3"
+                // src={`${product.img} `}
+                src="https://picsum.photos/1080"
+                alt="imagen1"
+                Cardtitle={product.name}
+                text={`${product.price} MXN`} 
+                id={product.id}
+                // boton ver mas 
+                to={`/productos/${product.id}`}
+                // boton eliminar
+                onClick={() => eliminarProducto(product.id)}
+              />
+             
+            </article>
           );}
         )}
       </section>
