@@ -6,19 +6,16 @@ import { AuthProvider } from "./context/AuthContext";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import ProductState from "./context/ProductState";
-// import ProducContextTOP from "./context/ProductTops/ProductContextTOP";
 
 const App = () => {
   return (
     <>
-      {/* <ProducContextTOP> */}
-        <AuthProvider>
-          <ProductState>
-            <AppRouter />
-            <Footer />
-          </ProductState>
-        </AuthProvider>
-      {/* </ProducContextTOP> */}
+      <AuthProvider>
+        <ProductState>
+          <AppRouter />
+          <Footer />
+        </ProductState>
+      </AuthProvider>
     </>
   );
 };

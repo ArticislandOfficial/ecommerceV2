@@ -1,16 +1,12 @@
 import React, { useReducer, useCallback } from "react";
 // USECALLBACK SE UTILIZARA PARA MEMORIZAR FUNCIONES Y QUE NO SE EJECUNTEN VARIAS VECES CON LOS USEFFECT
-import ProducContextTOP from "./ProductContextTOP";
+import ProductContextTOP from "./ProductContextTOP";
 import productReducer from "./ProductReducerTOP";
 import {
-  // obtenerProductoService,
-  // actualizarProductoService,
-  // crearProductoService,
-  // eliminarProductoService,
   obtenerProductosService,
-} from "../services/ProductServices";
+} from "../services/ProductTOPServices";
 const initialState = {
-  products: [],
+  productsTOP: [],
 };
 
 const ProductState = ({ children }) => {
@@ -33,46 +29,17 @@ const ProductState = ({ children }) => {
       payload: productos,
     });
   }, []);
-    // const crearProducto = async (form) => {
-    //   await crearProductoService(form);
-    //   await obtenerProductos();
-    //   // console.log(form);
-    // };
-    //   const eliminarProducto = async (id) => {
-    //     await eliminarProductoService(id);
-    //     await obtenerProductos();
-    //   };
-    //     const actualizarProducto = async (id, form) => {
-    //       await actualizarProductoService(id, form);
-    //       await obtenerProductos(id);
-    //     };
-    //      const obtenerProducto = useCallback(async (id) => {
-    //        const res = await obtenerProductoService(id);
-    //         console.log(res.data);
-          //  const producto = {
-          //    id: res.data._id,
-          //    name: res.data.name,
-          //    description: res.data.description,
-          //    price: res.data.price,
-          //  };
-          //  dispatch({
-          //    type: "OBTENER_PRODUCTO",
-          //    payload: producto,
-          //  });
-        //  }, []);
-  return (
-    <ProducContextTOP.Provider
+
+     return (
+    <ProductContextTOP.Provider
       value={{
-        products: globalState.products,
+        productsTOP: globalState.productsTOP,
         obtenerProductos,
-        // crearProducto,
-        // eliminarProducto,
-        // actualizarProducto,
-        // obtenerProducto,
+  
       }}
     >
       {children}
-    </ProducContextTOP.Provider>
+    </ProductContextTOP.Provider>
   );
 };
 
