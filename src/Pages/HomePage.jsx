@@ -1,10 +1,12 @@
 import React from "react";
-// import ProductContextTOP from "../context/ProductTops/ProductContextTOP";
-import { NavLink } from "react-router-dom";
 
-// import Cards from "../components/Cards";
+import { NavLink } from "react-router-dom";
+import CardsHome from "../components/CardsHome";
+
+
 
 const HomePage = () => {
+
   return (
     <>
       <main className="mt-5 pt-5">
@@ -26,18 +28,27 @@ const HomePage = () => {
         </section>
         <section className="row ">
           <h3 className="my-3">Top de Productos</h3>
-
-          {/* <Cards
-            class="col-md-4"
-            src="https://picsum.photos/1080"
-            alt="imagen1"
-            Cardtitle="Producto 1"
-            text="20 USD"
-            href=""
-            textButton="Ver Producto"
-          />
-
-          <Cards
+          {/* {productsTOP.map((product) => {
+            return (
+              <article>
+                <CardsHome
+                  key1={product.id}
+                  class="col-md-3"
+                  // src={`${product.img} `}
+                  src="https://picsum.photos/1080"
+                  alt="imagen1"
+                  Cardtitle={product.name}
+                  text={`${product.price} MXN`}
+                  id={product.id}
+                  // boton ver mas
+                  to={`/productos/${product.id}`}
+                  // boton eliminar
+              
+                />
+              </article>
+            );
+          })} */}
+          <CardsHome
             class="col-md-4"
             src="https://picsum.photos/1080"
             alt="imagen1"
@@ -47,15 +58,25 @@ const HomePage = () => {
             textButton="Ver Producto"
           />
 
-          <Cards
+          <CardsHome
             class="col-md-4"
             src="https://picsum.photos/1080"
             alt="imagen1"
             Cardtitle="Producto 1"
-            text="80 USD"
+            text="50 USD"
             href=""
             textButton="Ver Producto"
-          /> */}
+          />
+
+          <CardsHome
+            class="col-md-4"
+            src="https://picsum.photos/1080"
+            alt="imagen1"
+            Cardtitle="Producto 1"
+            text="50 USD"
+            href=""
+            textButton="Ver Producto"
+          />
         </section>
       </main>
     </>
