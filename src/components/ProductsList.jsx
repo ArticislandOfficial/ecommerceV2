@@ -6,6 +6,7 @@ const ProductsList = () => {
 const { products, obtenerProductos ,eliminarProducto } = useContext(ProductContext);
   // console.log(products);
 useEffect(() => {
+  console.log("ejecutando obtener productos");
   obtenerProductos();
 }, [obtenerProductos]);
 
