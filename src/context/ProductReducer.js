@@ -10,6 +10,18 @@ const reducer = (globalState, action) => {
         ...globalState,
         product: action.payload,
       };
+    case "AGREGAR_PRODUCTO_CARRITO":
+      return {
+        ...globalState,
+        cart: [...globalState.cart, action.payload],
+      };
+    case "ELIMINAR_PRODUCTO_CARRITO":
+      return {
+        ...globalState,
+        cart: globalState.cart.filter(
+          (producto) => producto.id !== action.payload
+        ),
+      };
     default:
       return globalState;
   }
