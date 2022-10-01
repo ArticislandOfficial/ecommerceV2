@@ -44,12 +44,12 @@ const NavBarPublic = () => {
                 <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                   <li className="nav-item">
                     <NavLink className="nav-link" to="/inicio">
-                      Sign in
+                      Inicio de Sesion
                     </NavLink>
                   </li>
                   <li className="nav-item">
                     <NavLink className="nav-link" to="/register">
-                      Registro
+                      Registrate
                     </NavLink>
                   </li>
                 </ul>
