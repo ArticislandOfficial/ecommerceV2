@@ -8,7 +8,6 @@ const style = { layout: "vertical" };
 const PaypalCheckoutButton = ({ currency, amount, showSpinner }) => {
   // usePayPalScriptReducer can be use only inside children of PayPalScriptProviders
   // This is the main reason to wrap the PayPalButtons in a new component
-
   const [{ options, isPending }, dispatch] = usePayPalScriptReducer();
 
   // sb-wv9lr20565334@personal.example.com
@@ -53,7 +52,6 @@ const PaypalCheckoutButton = ({ currency, amount, showSpinner }) => {
         onApprove={function (data, actions) {
           return actions.order.capture().then(function () {
             console.log("Compra realizada");
-
             // Your code here after capture the order
           });
         }}
