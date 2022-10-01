@@ -1,6 +1,6 @@
 import React from "react";
 
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import CardsHome from "../components/CardsHome";
 
 
@@ -15,7 +15,7 @@ const HomePage = () => {
             <h2 className="py-1 px-2 text-center">
               Servicios de impresion , diseño y venta de modelos 3D
             </h2>
-            <NavLink to="/productos">
+            {/* <NavLink to="/productos">
               <button
                 type="button"
                 to="/productos"
@@ -23,7 +23,7 @@ const HomePage = () => {
               >
                 Ver catalogo
               </button>
-            </NavLink>
+            </NavLink> */}
           </article>
         </section>
         <section className="row ">
@@ -62,8 +62,8 @@ const HomePage = () => {
             class="col-md-4"
             src="https://picsum.photos/1080"
             alt="imagen1"
-            Cardtitle="Producto 1"
-            text="50 USD"
+            Cardtitle="Producto 2"
+            text="30 USD"
             href=""
             textButton="Ver Producto"
           />
@@ -72,7 +72,7 @@ const HomePage = () => {
             class="col-md-4"
             src="https://picsum.photos/1080"
             alt="imagen1"
-            Cardtitle="Producto 1"
+            Cardtitle="Producto 3"
             text="50 USD"
             href=""
             textButton="Ver Producto"
