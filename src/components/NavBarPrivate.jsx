@@ -59,7 +59,7 @@ const NavBarPrivate = () => {
                     </NavLink>
                   </li>
                   <button className="btn btn-danger" onClick={logout} type="submit">
-                    Search
+                    Cerrar Sesion
                   </button>
                   {/* <li className="nav-item">
                     <NavLink className="nav-link" to="/producto">
