@@ -1,5 +1,9 @@
-import React, { createContext, useState,useCallback } from "react";
-import { loginService, signupSerivce, verifyingTokenSerivce } from "../services/authSertvices";
+import React, { createContext, useState, useCallback } from "react";
+import {
+  loginService,
+  signupSerivce,
+  verifyingTokenSerivce,
+} from "../services/authSertvices";
 
 export const AuthContext = createContext({});
 
@@ -10,13 +14,13 @@ const initialState = {
   username: null,
   password: null,
   // bandera para navbar dinamico
-  authStatus: null,
+  authStatus: false,
 };
 
-export const AuthProvider = ({children}) => {
+export const AuthProvider = ({ children }) => {
   const [auth, setauth] = useState({ initialState });
-  //   para  recibir el formulario y entrar a la tienda 
-  const  login = async (form)=>{
+  //   para  recibir el formulario y entrar a la tienda
+  const login = async (form) => {
     const data = await loginService(form);
     setauth({
       id: data.data.id,
@@ -27,10 +31,10 @@ export const AuthProvider = ({children}) => {
       authStatus: true,
     });
     console.log("Iniciando sesion");
- 
+
     localStorage.setItem("token", data.token);
-  }
-// Funcion para crear usuario 
+  };
+  // Funcion para crear usuario
   const signup = async (form) => {
     console.log("Registrando usuario");
 
@@ -47,33 +51,33 @@ export const AuthProvider = ({children}) => {
     // se guarda en eln local storage
     localStorage.setItem("token", data.token);
   };
-//
- const verifyingToken = useCallback(async () => {
-   const token = localStorage.getItem("token");
+  //
+  const verifyingToken = useCallback(async () => {
+    const token = localStorage.getItem("token");
 
-   if (token) {
-     const resp = await verifyingTokenSerivce();
-     localStorage.setItem("token", resp.token);
-     setauth({
-       id: resp.data.id,
-       username: resp.data.username,
-       email: resp.data.email,
-       password: resp.data.password,
-       // bandera para navbar dinamico
-       authStatus: true,
-     });
-   } else {
-     localStorage.removeItem("token");
-     setauth({
-       id: null,
-       username: null,
-       email: null,
-       password: null,
-       // bandera para navbar dinamico
-       authStatus: false,
-     });
-   }
- }, []);
+    if (token) {
+      const resp = await verifyingTokenSerivce();
+      localStorage.setItem("token", resp.token);
+      setauth({
+        id: resp.data.id,
+        username: resp.data.username,
+        email: resp.data.email,
+        password: resp.data.password,
+        // bandera para navbar dinamico
+        authStatus: true,
+      });
+    } else {
+      localStorage.removeItem("token");
+      setauth({
+        id: null,
+        username: null,
+        email: null,
+        password: null,
+        // bandera para navbar dinamico
+        authStatus: false,
+      });
+    }
+  }, []);
   const logout = () => {
     console.log("remueve token");
     localStorage.removeItem("token");
@@ -86,5 +90,11 @@ export const AuthProvider = ({children}) => {
       authStatus: false,
     });
   };
-  return <AuthContext.Provider value={{auth , login,signup,verifyingToken,logout}}>{children}</AuthContext.Provider>;
-}
+  return (
+    <AuthContext.Provider
+      value={{ auth, login, signup, verifyingToken, logout }}
+    >
+      {children}
+    </AuthContext.Provider>
+  );
+};
