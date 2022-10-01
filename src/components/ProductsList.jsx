@@ -109,22 +109,20 @@ useEffect(() => {
       <section>
         {products.map((product) => {
           return (
-            <article>
+            <article key={product.id}>
               <Cards
-                key1={product.id}
                 class="col-md-3"
                 // src={`${product.img} `}
                 src="https://picsum.photos/1080"
                 alt="imagen1"
                 Cardtitle={product.name}
-                text={`${product.price} MXN`} 
+                text={`${product.price} MXN`}
                 id={product.id}
-                // boton ver mas 
+                // boton ver mas
                 to={`/productos/${product.id}`}
                 // boton eliminar
                 onClick={() => eliminarProducto(product.id)}
               />
-             
             </article>
           );}
         )}

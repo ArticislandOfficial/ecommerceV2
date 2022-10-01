@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const Cards = (props) => {
   return (
     <>
-      <div key1={props.key} className={props.class}>
+      <div className={props.class}>
         <section className="card estiloextcard  my-3 ">
           <img srcSet={props.src} className="card-img-top" alt={props.alt} />
           <article className="card-body text-center">
