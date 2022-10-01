@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
 
-import LabelInput from "../components/Labels/LabelInput";
-import TextArea from "../components/Labels/TextArea";
+// import LabelInput from "../components/Labels/LabelInput";
+// import TextArea from "../components/Labels/TextArea";
 
 const Porfile = () => {
+  const { auth } = useContext(AuthContext);
   return (
     <>
       <main>
         <h3 className="pb-3 mt-5 pt-5 ">Tu informaciòn personal</h3>
         <div className="row cont-posfotter-abajo pruebaform">
           <section className="col-md-6 ">
-            <article>
+            <h2>{auth.id}</h2>
+            <p>{auth.username}</p>
+            <p>{auth.email}</p>
+
+            {/* <article>
               <LabelInput
                 htmlFor="Tuusuario"
                 label="Tu usuario"
@@ -83,7 +89,7 @@ const Porfile = () => {
                 htmlFor="describete"
                 contenido="describete..."
               />
-            </article>
+            </article>*/}
           </section>
         </div>
         <button type="button" className="col-md-2 mb-3 btn btn-primary">
