@@ -1,6 +1,6 @@
 import React from "react";
 import FormSigIn from "../components/FormSingIn";
-import FormSigUp from "../components/FormSingUp";
+// import FormSigUp from "../components/FormSingUp";
 
 const RegistroInicio = () => {
   return (
@@ -14,12 +14,12 @@ const RegistroInicio = () => {
               <FormSigIn />
             </article>
           </section>
-          <section className="col-md-12">
+          {/* <section className="col-md-12">
             <h4 className="text-center">Registrate</h4>
             <article>
               <FormSigUp />
             </article>
-          </section>
+          </section> */}
         </div>
       </main>
     </>

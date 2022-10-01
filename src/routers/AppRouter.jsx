@@ -15,6 +15,7 @@ import RegistroInicio from '../Pages/RegistroInicio';
 import Producto from '../Pages/Producto';
 import Productos from '../Pages/Productos';
 import Porfile from '../Pages/Porfile';
+import RegisterPage from '../Pages/RegisterPage';
 
 
 
@@ -33,6 +34,7 @@ const AppRouter = () => {
             <Route path="/productos/:idproduct" element={<Producto />} />
             <Route path="/productos" element={<Productos />} />
             <Route path="/perfil" element={<Porfile />} />
+            <Route path="/register" element={<RegisterPage />} />
 
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>

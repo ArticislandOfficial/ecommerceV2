@@ -25,7 +25,6 @@ const NavBar = () => {
             </button>
             <div
               className="offcanvas offcanvas-end text-bg-dark"
-             
               id="offcanvasDarkNavbar"
               aria-labelledby="offcanvasDarkNavbarLabel"
             >
@@ -55,9 +54,15 @@ const NavBar = () => {
                   </li>
                   <li className="nav-item">
                     <NavLink className="nav-link" to="/registroInicio">
-                      Sign in/Log in
+                      Sign in/
                     </NavLink>
                   </li>
+                  <li className="nav-item">
+                    <NavLink className="nav-link" to="/register">
+                      Registro
+                    </NavLink>
+                  </li>
+
                   <li className="nav-item">
                     <NavLink className="nav-link" to="/perfil">
                       Mi Perfil
