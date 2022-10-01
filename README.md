@@ -9,4 +9,7 @@ Tecnologias utilizadas
 - Express
 - Bootstrap 
 - Netlify 
-- Mongo 
+- MongoDB 
+- Render.com
+- Paypal
+ 
