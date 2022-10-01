@@ -11,9 +11,9 @@ const NavBar = () => {
       <header>
         <nav className="navbar navbar-dark bg-dark fixed-top ">
           <div className="container-fluid">
-            <a className="navbar-brand" href="/#">
+            <NavLink to="/" className="navbar-brand " aria-current="page">
               Servicios de Impresion 3D ONE
-            </a>
+            </NavLink>
             <button
               className="navbar-toggler"
               type="button"
