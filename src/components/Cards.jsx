@@ -16,10 +16,10 @@ const Cards = (props) => {
             <NavLink to={props.to}>
               <button className="btn btn-primary">ver producto</button>
             </NavLink>
-
-            <button className="btn btn-danger" onClick={props.onClick}>
+{/* sE COMENTA BOTON PARA EVITAR QUE CUALQUIER USUARIO BORRE PRODUCTOS */}
+            {/* <button className="btn btn-danger" onClick={props.onClick}>
               Eliminar
-            </button>
+            </button> */}
           </article>
         </section>
       </div>

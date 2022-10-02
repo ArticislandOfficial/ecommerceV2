@@ -112,4 +112,13 @@
   width: 30rem;
   border-radius: 0.5rem;
 }
+  .contenedorCards {
+    display: flex;
+    justify-content: center;
 
+  }
+
+.pruebaFlex{
+  display:flex;
+    
+}
