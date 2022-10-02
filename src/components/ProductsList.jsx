@@ -18,9 +18,9 @@ useEffect(() => {
           return (
             <Cards
               key={product.id}
-              class="col-md-3"
+              class="col-md-4"
               src="https://picsum.photos/1080"
-              alt="imagen1"
+              alt={product.name}
               Cardtitle={product.name}
               text={`${product.price} MXN`}
               id={product.id}
@@ -80,28 +80,7 @@ useEffect(() => {
           /> */}
       </div>
 
-      <section>
-        {/* {products.map((product) => {
-          return (
-            
-              <article key={product.id}>
-                <Cards
-                  class="col-md-3"
-                  src="https://picsum.photos/1080"
-                  alt="imagen1"
-                  Cardtitle={product.name}
-                  text={`${product.price} MXN`}
-                  id={product.id}
-                  // boton ver mas
-                  to={`/productos/${product.id}`}
-                  // boton eliminar
-                  onClick={() => eliminarProducto(product.id)}
-                />
-              </article>
-         
-          );}
-        )} */}
-      </section>
+  
     </>
   );
 };
