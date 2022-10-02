@@ -3,7 +3,7 @@ import LabelInput from "./Labels/LabelInput";
 const FormSingUp = () => {
   return (
     <>
-      <form>
+      <form className="w-50">
         <LabelInput
           htmlFor="correo"
           label="Correo"
@@ -25,7 +25,6 @@ const FormSingUp = () => {
           id="contraseñaFS"
           ariadescribedby="passwordHelp"
         />
-     
 
         <div className=" text-center">
           <button type="submit" className=" text-center  btn btn-primary">

@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
 const CardsHome = (props) => {
   return (
@@ -12,9 +12,9 @@ const CardsHome = (props) => {
             <p className="card-text">{props.text}</p>
             <p className="card-text">{props.id}</p>
             {/* <NavLink to={props.to}> */}
-            <NavLink to='/product'>
+            {/* <NavLink to='/product'>
               <button className="btn btn-primary">ver producto</button>
-            </NavLink>
+            </NavLink> */}
           </article>
         </section>
       </div>

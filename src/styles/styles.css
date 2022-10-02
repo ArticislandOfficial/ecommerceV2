@@ -26,6 +26,11 @@
 .centrarcontenido {
   display: flex;
   align-items: center;
+
+}
+.anchoLargo{
+  width: auto;
+  height: 100vh;
 }
 .margen-navBar {
   margin-bottom: 30px;
@@ -107,3 +112,4 @@
   width: 30rem;
   border-radius: 0.5rem;
 }
+

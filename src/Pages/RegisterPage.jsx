@@ -27,7 +27,7 @@ const RegisterPage = () => {
 
   return (
     <>
-      <body className="pt-5 mt-5">
+      <body className="pt-5 mt-5 anchoLargo">
         <Title titulo="Registro" />
         <section className="row">
           <article className="col">

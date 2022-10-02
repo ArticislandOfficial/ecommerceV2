@@ -53,7 +53,7 @@ const HomePage = () => {
             src="https://picsum.photos/1080"
             alt="imagen1"
             Cardtitle="Producto 1"
-            text="50 USD"
+            text="50 MXN"
             href=""
             textButton="Ver Producto"
           />
@@ -63,7 +63,7 @@ const HomePage = () => {
             src="https://picsum.photos/1080"
             alt="imagen1"
             Cardtitle="Producto 2"
-            text="30 USD"
+            text="30 MXN"
             href=""
             textButton="Ver Producto"
           />
@@ -73,7 +73,7 @@ const HomePage = () => {
             src="https://picsum.photos/1080"
             alt="imagen1"
             Cardtitle="Producto 3"
-            text="50 USD"
+            text="50 MXN"
             href=""
             textButton="Ver Producto"
           />

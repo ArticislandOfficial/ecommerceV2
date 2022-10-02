@@ -6,11 +6,10 @@ const RegistroInicio = () => {
   return (
     <>
       <main className="container mt-5 ">
-        <div className="row prop-paracentrar cont-posfotter-abajo pruebaform">
-          <h2 className="text-center ">Vamos registrate o inicia sesion</h2>
-          <section className="col-md-12 border-end ">
-            <h4 className="text-center">Inicia Sesion</h4>
-            <article className="">
+        <div className="row prop-paracentrar  pruebaform">
+          <h1 className="text-center "> Inicia sesion</h1>
+          <section className=" col d-flex justify-content-center align-items-center">
+            <article className="w-50">
               <FormSigIn />
             </article>
           </section>
