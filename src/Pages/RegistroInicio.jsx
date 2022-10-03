@@ -5,7 +5,7 @@ import FormSigIn from "../components/FormSingIn";
 const RegistroInicio = () => {
   return (
     <>
-      <main className="container mt-5 ">
+      <main className="container mt-5  anchoLargo">
         <div className="row prop-paracentrar  pruebaform">
           <h1 className="text-center "> Inicia sesion</h1>
           <section className=" col d-flex justify-content-center align-items-center">
